@@ -1,0 +1,6 @@
+framework module Pods_PickManager {
+  umbrella header "Pods-PickManager-umbrella.h"
+
+  export *
+  module * { export * }
+}
