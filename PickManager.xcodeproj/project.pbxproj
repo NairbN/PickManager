@@ -11,6 +11,15 @@
 		4440E75C2D7AAF3B00B63945 /* FinanaceManagerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4440E75B2D7AAF3B00B63945 /* FinanaceManagerViewModel.swift */; };
 		4440E7632D7ADDED00B63945 /* GoogleSignInService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4440E7622D7ADDED00B63945 /* GoogleSignInService.swift */; };
 		4440E76E2D7AF07F00B63945 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4440E76D2D7AF07F00B63945 /* SignInView.swift */; };
+		4440E7752D7BCD5000B63945 /* GoogleSheetIndexer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4440E7742D7BCD5000B63945 /* GoogleSheetIndexer.swift */; };
+		4440E77B2D7BCEC000B63945 /* AccountListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4440E77A2D7BCEC000B63945 /* AccountListView.swift */; };
+		4440E78D2D7C109300B63945 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4440E78C2D7C109300B63945 /* SignInViewModel.swift */; };
+		4440E7942D7C3BF500B63945 /* Balance+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4440E78E2D7C3BF500B63945 /* Balance+CoreDataClass.swift */; };
+		4440E7952D7C3BF500B63945 /* Balance+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4440E78F2D7C3BF500B63945 /* Balance+CoreDataProperties.swift */; };
+		4440E7962D7C3BF500B63945 /* Account+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4440E7902D7C3BF500B63945 /* Account+CoreDataClass.swift */; };
+		4440E7972D7C3BF500B63945 /* Account+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4440E7912D7C3BF500B63945 /* Account+CoreDataProperties.swift */; };
+		4440E7982D7C3BF500B63945 /* Deposit+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4440E7922D7C3BF500B63945 /* Deposit+CoreDataClass.swift */; };
+		4440E7992D7C3BF500B63945 /* Deposit+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4440E7932D7C3BF500B63945 /* Deposit+CoreDataProperties.swift */; };
 		44BA61AE2D79384C0065AE83 /* PickManagerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BA61AD2D79384C0065AE83 /* PickManagerApp.swift */; };
 		44BA61B22D79384E0065AE83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44BA61B12D79384E0065AE83 /* Assets.xcassets */; };
 		44BA61B72D79384E0065AE83 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BA61B62D79384E0065AE83 /* Persistence.swift */; };
@@ -18,10 +27,6 @@
 		44BA61C42D79384E0065AE83 /* PickManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BA61C32D79384E0065AE83 /* PickManagerTests.swift */; };
 		44BA61CE2D79384E0065AE83 /* PickManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BA61CD2D79384E0065AE83 /* PickManagerUITests.swift */; };
 		44BA61D02D79384E0065AE83 /* PickManagerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BA61CF2D79384E0065AE83 /* PickManagerUITestsLaunchTests.swift */; };
-		44BA61E02D793BB70065AE83 /* Balance+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BA61DC2D793BB70065AE83 /* Balance+CoreDataClass.swift */; };
-		44BA61E12D793BB70065AE83 /* Balance+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BA61DD2D793BB70065AE83 /* Balance+CoreDataProperties.swift */; };
-		44BA61E22D793BB70065AE83 /* Deposit+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BA61DE2D793BB70065AE83 /* Deposit+CoreDataClass.swift */; };
-		44BA61E32D793BB70065AE83 /* Deposit+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BA61DF2D793BB70065AE83 /* Deposit+CoreDataProperties.swift */; };
 		44BA61E82D793E5D0065AE83 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BA61E72D793E5D0065AE83 /* CoreDataManager.swift */; };
 		44BA61EA2D7950150065AE83 /* UserSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BA61E92D7950150065AE83 /* UserSettingsView.swift */; };
 		44BA61EC2D79506A0065AE83 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BA61EB2D79506A0065AE83 /* GraphView.swift */; };
@@ -55,6 +60,15 @@
 		4440E7622D7ADDED00B63945 /* GoogleSignInService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInService.swift; sourceTree = "<group>"; };
 		4440E76D2D7AF07F00B63945 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		4440E7712D7AF5E800B63945 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4440E7742D7BCD5000B63945 /* GoogleSheetIndexer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleSheetIndexer.swift; sourceTree = "<group>"; };
+		4440E77A2D7BCEC000B63945 /* AccountListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListView.swift; sourceTree = "<group>"; };
+		4440E78C2D7C109300B63945 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		4440E78E2D7C3BF500B63945 /* Balance+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Balance+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		4440E78F2D7C3BF500B63945 /* Balance+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Balance+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		4440E7902D7C3BF500B63945 /* Account+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		4440E7912D7C3BF500B63945 /* Account+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		4440E7922D7C3BF500B63945 /* Deposit+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Deposit+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		4440E7932D7C3BF500B63945 /* Deposit+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Deposit+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		44BA61AA2D79384C0065AE83 /* PickManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44BA61AD2D79384C0065AE83 /* PickManagerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickManagerApp.swift; sourceTree = "<group>"; };
 		44BA61B12D79384E0065AE83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -65,10 +79,6 @@
 		44BA61C92D79384E0065AE83 /* PickManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PickManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		44BA61CD2D79384E0065AE83 /* PickManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickManagerUITests.swift; sourceTree = "<group>"; };
 		44BA61CF2D79384E0065AE83 /* PickManagerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickManagerUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		44BA61DC2D793BB70065AE83 /* Balance+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Balance+CoreDataClass.swift"; sourceTree = "<group>"; };
-		44BA61DD2D793BB70065AE83 /* Balance+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Balance+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		44BA61DE2D793BB70065AE83 /* Deposit+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Deposit+CoreDataClass.swift"; sourceTree = "<group>"; };
-		44BA61DF2D793BB70065AE83 /* Deposit+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Deposit+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		44BA61E72D793E5D0065AE83 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		44BA61E92D7950150065AE83 /* UserSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsView.swift; sourceTree = "<group>"; };
 		44BA61EB2D79506A0065AE83 /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
@@ -115,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				4440E75B2D7AAF3B00B63945 /* FinanaceManagerViewModel.swift */,
+				4440E78C2D7C109300B63945 /* SignInViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -122,6 +133,7 @@
 		4440E75D2D7AB0B700B63945 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				4440E7742D7BCD5000B63945 /* GoogleSheetIndexer.swift */,
 				44BA61B62D79384E0065AE83 /* Persistence.swift */,
 				44BA61E72D793E5D0065AE83 /* CoreDataManager.swift */,
 				44BEEEE52D799782002B3239 /* GoogleSheetsService.swift */,
@@ -207,6 +219,7 @@
 				44BA61E92D7950150065AE83 /* UserSettingsView.swift */,
 				44BA61EB2D79506A0065AE83 /* GraphView.swift */,
 				4440E76D2D7AF07F00B63945 /* SignInView.swift */,
+				4440E77A2D7BCEC000B63945 /* AccountListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -214,10 +227,12 @@
 		44BA61E62D793C1B0065AE83 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				44BA61DC2D793BB70065AE83 /* Balance+CoreDataClass.swift */,
-				44BA61DD2D793BB70065AE83 /* Balance+CoreDataProperties.swift */,
-				44BA61DE2D793BB70065AE83 /* Deposit+CoreDataClass.swift */,
-				44BA61DF2D793BB70065AE83 /* Deposit+CoreDataProperties.swift */,
+				4440E78E2D7C3BF500B63945 /* Balance+CoreDataClass.swift */,
+				4440E78F2D7C3BF500B63945 /* Balance+CoreDataProperties.swift */,
+				4440E7902D7C3BF500B63945 /* Account+CoreDataClass.swift */,
+				4440E7912D7C3BF500B63945 /* Account+CoreDataProperties.swift */,
+				4440E7922D7C3BF500B63945 /* Deposit+CoreDataClass.swift */,
+				4440E7932D7C3BF500B63945 /* Deposit+CoreDataProperties.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -492,19 +507,24 @@
 			files = (
 				44BA61EA2D7950150065AE83 /* UserSettingsView.swift in Sources */,
 				44BA61B72D79384E0065AE83 /* Persistence.swift in Sources */,
+				4440E7942D7C3BF500B63945 /* Balance+CoreDataClass.swift in Sources */,
 				4440E75A2D7AAF0B00B63945 /* FinanceManagerView.swift in Sources */,
+				4440E78D2D7C109300B63945 /* SignInViewModel.swift in Sources */,
 				44BA61EC2D79506A0065AE83 /* GraphView.swift in Sources */,
+				4440E7982D7C3BF500B63945 /* Deposit+CoreDataClass.swift in Sources */,
+				4440E7972D7C3BF500B63945 /* Account+CoreDataProperties.swift in Sources */,
+				4440E7992D7C3BF500B63945 /* Deposit+CoreDataProperties.swift in Sources */,
 				4440E75C2D7AAF3B00B63945 /* FinanaceManagerViewModel.swift in Sources */,
-				44BA61E22D793BB70065AE83 /* Deposit+CoreDataClass.swift in Sources */,
+				4440E77B2D7BCEC000B63945 /* AccountListView.swift in Sources */,
+				4440E7952D7C3BF500B63945 /* Balance+CoreDataProperties.swift in Sources */,
 				4440E7632D7ADDED00B63945 /* GoogleSignInService.swift in Sources */,
-				44BA61E12D793BB70065AE83 /* Balance+CoreDataProperties.swift in Sources */,
 				44BEEEE62D799782002B3239 /* GoogleSheetsService.swift in Sources */,
 				4440E76E2D7AF07F00B63945 /* SignInView.swift in Sources */,
-				44BA61E32D793BB70065AE83 /* Deposit+CoreDataProperties.swift in Sources */,
-				44BA61E02D793BB70065AE83 /* Balance+CoreDataClass.swift in Sources */,
+				4440E7752D7BCD5000B63945 /* GoogleSheetIndexer.swift in Sources */,
 				44BA61E82D793E5D0065AE83 /* CoreDataManager.swift in Sources */,
 				44BA61BA2D79384E0065AE83 /* PickManager.xcdatamodeld in Sources */,
 				44BA61AE2D79384C0065AE83 /* PickManagerApp.swift in Sources */,
+				4440E7962D7C3BF500B63945 /* Account+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

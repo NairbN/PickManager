@@ -2,7 +2,7 @@
 //  Deposit+CoreDataProperties.swift
 //  PickManager
 //
-//  Created by Brian Nguyen on 3/5/25.
+//  Created by Brian Nguyen on 3/8/25.
 //
 //
 
@@ -16,8 +16,9 @@ extension Deposit {
         return NSFetchRequest<Deposit>(entityName: "Deposit")
     }
 
-    @NSManaged public var timestamp: Date?
     @NSManaged public var amount: Double
+    @NSManaged public var timestamp: Date?
+    @NSManaged public var account: Account?
 
 }
 

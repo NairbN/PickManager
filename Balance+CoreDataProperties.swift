@@ -2,7 +2,7 @@
 //  Balance+CoreDataProperties.swift
 //  PickManager
 //
-//  Created by Brian Nguyen on 3/5/25.
+//  Created by Brian Nguyen on 3/8/25.
 //
 //
 
@@ -18,6 +18,7 @@ extension Balance {
 
     @NSManaged public var amount: Double
     @NSManaged public var timestamp: Date?
+    @NSManaged public var account: Account?
 
 }
 
