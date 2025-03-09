@@ -20,6 +20,7 @@
 		4440E7972D7C3BF500B63945 /* Account+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4440E7912D7C3BF500B63945 /* Account+CoreDataProperties.swift */; };
 		4440E7982D7C3BF500B63945 /* Deposit+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4440E7922D7C3BF500B63945 /* Deposit+CoreDataClass.swift */; };
 		4440E7992D7C3BF500B63945 /* Deposit+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4440E7932D7C3BF500B63945 /* Deposit+CoreDataProperties.swift */; };
+		4440E79B2D7CF01A00B63945 /* AppInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4440E79A2D7CF01A00B63945 /* AppInitializer.swift */; };
 		44BA61AE2D79384C0065AE83 /* PickManagerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BA61AD2D79384C0065AE83 /* PickManagerApp.swift */; };
 		44BA61B22D79384E0065AE83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44BA61B12D79384E0065AE83 /* Assets.xcassets */; };
 		44BA61B72D79384E0065AE83 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BA61B62D79384E0065AE83 /* Persistence.swift */; };
@@ -69,6 +70,7 @@
 		4440E7912D7C3BF500B63945 /* Account+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		4440E7922D7C3BF500B63945 /* Deposit+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Deposit+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		4440E7932D7C3BF500B63945 /* Deposit+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Deposit+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		4440E79A2D7CF01A00B63945 /* AppInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInitializer.swift; sourceTree = "<group>"; };
 		44BA61AA2D79384C0065AE83 /* PickManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44BA61AD2D79384C0065AE83 /* PickManagerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickManagerApp.swift; sourceTree = "<group>"; };
 		44BA61B12D79384E0065AE83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				44BA61AD2D79384C0065AE83 /* PickManagerApp.swift */,
+				4440E79A2D7CF01A00B63945 /* AppInitializer.swift */,
 				44BA61E62D793C1B0065AE83 /* Models */,
 				44BA61E52D793C090065AE83 /* Views */,
 				4440E7562D7AAE9100B63945 /* View Models */,
@@ -521,6 +524,7 @@
 				44BEEEE62D799782002B3239 /* GoogleSheetsService.swift in Sources */,
 				4440E76E2D7AF07F00B63945 /* SignInView.swift in Sources */,
 				4440E7752D7BCD5000B63945 /* GoogleSheetIndexer.swift in Sources */,
+				4440E79B2D7CF01A00B63945 /* AppInitializer.swift in Sources */,
 				44BA61E82D793E5D0065AE83 /* CoreDataManager.swift in Sources */,
 				44BA61BA2D79384E0065AE83 /* PickManager.xcdatamodeld in Sources */,
 				44BA61AE2D79384C0065AE83 /* PickManagerApp.swift in Sources */,

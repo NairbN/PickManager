@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import GoogleSignIn
 
 @main
 struct PickManagerApp: App {
@@ -14,23 +13,18 @@ struct PickManagerApp: App {
     @StateObject private var googleSignInManager = GoogleSignInManager.shared
     
     // Keep track of sign-in state
+    @State private var isAppInitialized = false
+    @State private var initializationError: Error? = nil
 
     var body: some Scene {
         WindowGroup {
             Group {
-                if googleSignInManager.currentUser != nil {
-                    FinanceManagerView()
-                        .environment(\.managedObjectContext, persistenceController.container.viewContext)
-                } else {
-                    SignInView()
-                        .onAppear {
-                            googleSignInManager.restorePreviousSignIn()  // Restore sign-in on launch
-                        }
-                }
+                SignInView()
             }
         }
     }
 }
+
 
 
 

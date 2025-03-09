@@ -2,7 +2,6 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22H221" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Account" representedClassName="Account" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String"/>
-        <attribute name="range" optional="YES" attributeType="String"/>
         <relationship name="balance" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Balance" inverseName="account" inverseEntity="Balance"/>
         <relationship name="deposits" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Deposit" inverseName="account" inverseEntity="Deposit"/>
     </entity>

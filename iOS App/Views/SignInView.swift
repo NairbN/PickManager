@@ -20,10 +20,15 @@ struct SignInView: View {
                         viewModel.signIn()
                     }
                     .padding()
+
+                    if viewModel.isSignedIn == false {
+                        ProgressView("Restoring sign-in...")
+                            .progressViewStyle(CircularProgressViewStyle())
+                            .padding()
+                    }
                 }
             }
-            .onAppear {
-                // Attempt to restore previous sign-in on appearance
+            .onAppear() {
                 viewModel.restoreSignIn()
             }
         }

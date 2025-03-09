@@ -9,11 +9,14 @@ import Foundation
 import SwiftUI
 
 class SignInViewModel: ObservableObject {
-    private let googleSignInManager = GoogleSignInManager()
+    private let googleSignInManager = GoogleSignInManager.shared
     @Published var isSignedIn = false  // Track if user is signed in
     
+    // Flag to ensure restoreSignIn is only called once
+    private var hasRestoredSignIn = false
+
     private let accountManager = CoreDataManager.shared  // Assuming you have this for account management
-    
+
     func signIn() {
         guard let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
               let rootViewController = scene.windows.first?.rootViewController else {
@@ -33,21 +36,27 @@ class SignInViewModel: ObservableObject {
     }
 
     func restoreSignIn() {
-        // Restoring sign-in status without a closure
-        googleSignInManager.restorePreviousSignIn()
+        // Avoid multiple calls to restoreSignIn
+        if hasRestoredSignIn { return }
         
-        if let currentUser = googleSignInManager.currentUser {
-            print("Google Sign-In restored: \(currentUser.profile?.name ?? "No name")")
-            self.isSignedIn = true
-        } else {
-            print("Error restoring sign-in: No user found.")
+        hasRestoredSignIn = true
+        
+        googleSignInManager.restorePreviousSignIn { [weak self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let user):
+                    print("Google Sign-In restored: \(user.profile?.name ?? "No name")")
+                    self?.isSignedIn = true  // Update isSignedIn
+                case .failure(let error):
+                    print("Error restoring sign-in: \(error.localizedDescription)")
+                    self?.isSignedIn = false  // Ensure it is false if no user is found
+                }
+            }
         }
     }
-
-
-    
-
 }
+
+
 
 
 

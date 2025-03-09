@@ -40,15 +40,11 @@ class CoreDataManager {
     }
 
     // MARK: - Save Account Data
-    func saveAccount(name: String, totalDeposits: Double, currentBalance: Double, accountRange: String) {
+    func saveAccount(name: String, totalDeposits: Double, currentBalance: Double) {
         let account = Account(context: context)
         account.name = name
-        account.range = accountRange
-        
-        // Save the balance first (required for one-to-one relationship)
-        saveBalance(amount: currentBalance, to: account)
 
-        // Save deposits for the account
+        saveBalance(amount: currentBalance, to: account)
         saveDeposit(amount: totalDeposits, to: account)
 
         do {
@@ -111,13 +107,37 @@ class CoreDataManager {
         let accountDeleteRequest = NSBatchDeleteRequest(fetchRequest: accountFetchRequest)
         
         do {
+            // Perform batch deletes
             try context.execute(depositDeleteRequest)
             try context.execute(balanceDeleteRequest)
             try context.execute(accountDeleteRequest)
+            
+            // Reset the context if necessary to reflect the changes
+            context.reset()
+            
+            // Optionally save context if your saveContext method does something additional
             saveContext()
         } catch {
-            print("Failed to delete all data: \(error)")
+            print("Failed to delete all data: \(error.localizedDescription)")
         }
+    }
+
+    
+    //Mark : - Google Sheets Value formated table
+    func getTable() -> [[String]]{
+        let accounts = fetchAccounts()
+        var table: [[String]] = [[]]
+        for account in accounts{
+            let line:[String] = [account.name ?? "", String(getTotalDeposits(for: account) ?? 0), String(account.balance?.amount ?? 0)]
+            table.append(line)
+        }
+        return table
+    }
+    
+    // MARK: - Total Deposits
+    func getTotalDeposits(for account: Account) -> Double?{
+        let deposits = fetchDeposits(for: account)
+        return deposits.reduce(0) { $0 + $1.amount }
     }
     
     // MARK: - Delete Account Data
@@ -138,6 +158,22 @@ class CoreDataManager {
         context.delete(account)
         
         saveContext()
+    }
+    
+    // MARK: - Reset Account Data
+    func resetAccountData(account:Account){
+        if let deposits = account.deposits?.allObjects as? [Deposit] {
+            for deposit in deposits {
+                context.delete(deposit)
+            }
+        }
+        
+        if let balance = account.balance {
+            context.delete(balance)
+        }
+        
+        saveDeposit(amount: 0, to: account)
+        saveBalance(amount: 0, to: account)
     }
 
     // MARK: - Save Context

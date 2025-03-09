@@ -57,7 +57,7 @@ struct FinanceManagerView: View {
                     .padding(.top)
                 
                 // Reset data button
-                Button("Reset All Data") {
+                Button("Reset Account Data") {
                     viewModel.resetAccountData()
                 }
                 .padding(.top)
@@ -80,8 +80,8 @@ struct FinanceManagerView: View {
                 
             }
             .onAppear {
-                GoogleSignInManager.shared.restorePreviousSignIn()
-                viewModel.setAccount(accountName: "Account 2")
+                CoreDataManager.shared.deleteAllData()
+                viewModel.initialize(accountName: "Account 1")
             }
             .navigationTitle("Empire Finance Manager")
         }
